@@ -1,0 +1,44 @@
+# API tests
+**/*.rest
+
+# DB data
+data
+dist
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# dotenv environment variables file
+.DS_Store
+.env
+.env.test
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# FuseBox cache
+.fusebox/
+
+.vscode
+
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+build
+

@@ -1,0 +1,33 @@
+{
+  "name": "passment",
+  "description": "Passment project monorepo",
+  "version": "0.0.1",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:server": "yarn --cwd ./packages/api dev",
+    "dev:client": "yarn --cwd ./packages/client dev",
+    "dev": "concurrently \"yarn dev:server \" \" yarn dev:client \" -n \"api,web\" -c \"black.bgGreen,black.bgBlue\"",
+    "db:up": "mkdir -p data && docker-compose up --force-recreate -d",
+    "db:start": "docker-compose start",
+    "db:stop": "docker-compose stop",
+    "db:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  },
+  "author": "Stanislav Panchenko <stenzel.punch@gmail.com>",
+  "keywords": [
+    "passment",
+    "typescript",
+    "react",
+    "node",
+    "express"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.2.0"
+  }
+}

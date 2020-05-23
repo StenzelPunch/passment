@@ -1,0 +1,6 @@
+{
+  "watch": ["src", "../common/build"],
+  "ext": "js,ts,tsx,json",
+  "exec": "ts-node ./src/index.ts -r tsconfig-paths/register",
+  "delay": 100
+}
