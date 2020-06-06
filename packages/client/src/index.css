@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic");
 
 * {
-    font-family: "Roboto", sans-serif;
-    padding: 0;
-    margin: 0;
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
 }
