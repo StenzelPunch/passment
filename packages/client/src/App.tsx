@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 import "./App.css";
 import { Header } from "./components/Header";
+import { Footer } from "./components/Footer";
 
 const Landing = loadable(() => import("./components/pages/Landing"));
 
@@ -14,6 +15,7 @@ function App() {
       <Switch>
         <Route path="/" children={<Landing />} />
       </Switch>
+      <Footer />
     </Router>
   );
 }
