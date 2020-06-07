@@ -7,9 +7,12 @@
     "packages/*"
   ],
   "scripts": {
-    "dev:server": "yarn --cwd ./packages/api dev",
-    "dev:client": "yarn --cwd ./packages/client dev",
+    "dev:server": "yarn workspace @passment/api dev",
+    "build:server": "yarn workspace @passment/api build",
+    "dev:client": "yarn workspace @passment/client dev",
+    "build:client": "yarn workspace @passment/client build",
     "dev": "concurrently \"yarn dev:server \" \" yarn dev:client \" -n \"api,web\" -c \"black.bgGreen,black.bgBlue\"",
+    "build": "yarn build:server && yarn build:client",
     "db:up": "mkdir -p data && docker-compose up --force-recreate -d",
     "db:start": "docker-compose start",
     "db:stop": "docker-compose stop",
