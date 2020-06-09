@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import "@app/components/pages/Landing/Landing.scss";
+import { Container } from "@app/components/Container";
 
 const prices = [100, 50, 100, 120];
 
@@ -9,7 +10,7 @@ export const Landing = () => {
   return (
     <main>
       <section className="service">
-        <div className="container">
+        <Container>
           <div className="wrapper">
             <div className="service-image">
               <img className="service-image__img" src="/images/service-image.png" alt="NFC Визитки" />
@@ -22,10 +23,10 @@ export const Landing = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
       <section className="usage">
-        <div className="container">
+        <Container>
           <div className="wrapper">
             <h2 className="usage-title">{t("usage-title")}</h2>
             <div className="usage-items">
@@ -35,10 +36,10 @@ export const Landing = () => {
               <UsageItem index={3} />
             </div>
           </div>
-        </div>
+        </Container>
       </section>
       <section className="innovations">
-        <div className="container">
+        <Container>
           <div className="wrapper">
             <div className="innovations-body">
               <h2 className="innovations-body__title">{t("innovations-body__title")}</h2>
@@ -53,27 +54,27 @@ export const Landing = () => {
               />
             </div>
           </div>
-        </div>
+        </Container>
       </section>
       <section className="image">
-        <div className="container">
+        <Container>
           <div className="wrapper">
             <img className="image-img" src="/images/hands-image.png" alt="NFC визитка" />
           </div>
-        </div>
+        </Container>
       </section>
       <section className="cards">
-        <div className="container">
+        <Container>
           <nav className="wrapper">
             <Card index={0} />
             <Card index={1} />
             <Card index={2} />
             <Card index={3} />
           </nav>
-        </div>
+        </Container>
       </section>
       <section className="gadgets">
-        <div className="container">
+        <Container>
           <div className="wrapper">
             <h2 className="gadgets-title">{t("gadgets-title")}</h2>
             <p className="gadgets-text">{t("gadgets-text")}</p>
@@ -96,18 +97,18 @@ export const Landing = () => {
               </div>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
       <section className="questions">
-        <div className="container">
+        <Container>
           <div className="wrapper">
             <h3 className="questions-title">{t("questions-title")}</h3>
             <p className="questions-text">{t("questions-text")}</p>
           </div>
-        </div>
+        </Container>
       </section>
       <section className="landing-contacts">
-        <div className="container">
+        <Container>
           <div className="wrapper">
             <div className="landing-contacts-item">
               <div className="landing-contacts-item__image">
@@ -137,7 +138,7 @@ export const Landing = () => {
               </a>
             </div>
           </div>
-        </div>
+        </Container>
       </section>
     </main>
   );
