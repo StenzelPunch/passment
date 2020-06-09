@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled/macro";
 import React from "react";
-import { Conatiner } from "@app/components/Conatiner";
+import { Container } from "@app/components/Container";
 import "./pages/Landing/Landing.scss";
 import { useTranslation } from "react-i18next";
 
@@ -20,9 +20,9 @@ export const Footer: React.FC = () => {
 
   return (
     <StyledFooter>
-      <Conatiner>
+      <Container>
         <StyledFooterText>{t("footer-text")}</StyledFooterText>
-      </Conatiner>
+      </Container>
     </StyledFooter>
   );
 };

@@ -3,7 +3,7 @@ import styled from "@emotion/styled/macro";
 const CONATINER_PADDING = 20;
 const CONATINER_MAX_WIDTH = 1000;
 
-export const Conatiner = styled.div`
+export const Container = styled.div`
   max-width: ${CONATINER_MAX_WIDTH + CONATINER_PADDING * 2}px;
   width: 100%;
   margin: 0 auto;

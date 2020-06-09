@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled/macro";
 import React, { useState } from "react";
-import { Conatiner } from "@app/components/Conatiner";
+import { Container } from "@app/components/Container";
 import { Card, cardMaxWidthCss } from "@app/components/Card";
 import { Input } from "@app/components/Input";
 import { verticalFlex } from "@app/style/spacing";
@@ -10,7 +10,7 @@ import { colors } from "@app/style/colors";
 import { TextSizeCss } from "@app/style/text";
 import { signup } from "@app/api/signup";
 
-const StyledConatiner = styled(Conatiner)`
+const StyledContainer = styled(Container)`
   height: 100%;
   align-items: center;
 `;
@@ -27,7 +27,7 @@ export const Signup: React.FC = () => {
   const [passwordConfirmation, setPasswordConfirmation] = useState<string>();
 
   return (
-    <StyledConatiner css={verticalFlex.l}>
+    <StyledContainer css={verticalFlex.l}>
       <PageHeader>Регистрация</PageHeader>
       <Card css={[verticalFlex.s, cardMaxWidthCss]}>
         <Input
@@ -78,6 +78,6 @@ export const Signup: React.FC = () => {
           Далее
         </button>
       </Card>
-    </StyledConatiner>
+    </StyledContainer>
   );
 };

@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled/macro";
 import React from "react";
-import { Conatiner } from "@app/components/Conatiner";
+import { Container } from "@app/components/Container";
 import "@app/components/pages/Landing/Landing.scss";
 import { Logo } from "@app/components/Logo";
 import { LangSwitcher } from "@app/components/LangSwitcher";
@@ -22,12 +22,12 @@ const StyledLogo = styled(Logo)`
 export const Header: React.FC = () => {
   return (
     <header>
-      <Conatiner>
+      <Container>
         <HeaderContent>
           <StyledLogo />
           <LangSwitcher />
         </HeaderContent>
-      </Conatiner>
+      </Container>
     </header>
   );
 };
