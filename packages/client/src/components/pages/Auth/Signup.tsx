@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled/macro";
 import React, { useState } from "react";
-import { Conatiner } from "@app/components/Conatiner";
+import { Container } from "@app/components/Container";
 import { Card, cardMaxWidthCss } from "@app/components/Card";
 import { Input } from "@app/components/Input";
 import { verticalFlex } from "@app/style/spacing";
@@ -10,7 +10,7 @@ import { colors } from "@app/style/colors";
 import { TextSizeCss } from "@app/style/text";
 import { signup } from "@app/api/signup";
 
-const StyledConatiner = styled(Conatiner)`
+const StyledConatiner = styled(Container)`
   height: 100%;
   align-items: center;
 `;
