@@ -4,7 +4,7 @@ import "./Landing.scss";
 
 const prices = [100, 50, 100, 120];
 
-const Landing = () => {
+export const Landing = () => {
   const { t } = useTranslation();
   return (
     <main>
@@ -183,5 +183,3 @@ const UsageItem: React.FC<{ index: number }> = ({ index }) => {
     </div>
   );
 };
-
-export default Landing;

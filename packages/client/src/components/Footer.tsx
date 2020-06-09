@@ -11,14 +11,18 @@ const StyledFooterText = styled.p`
   margin: 20px 0;
 `;
 
+const StyledFooter = styled.footer`
+  margin-top: auto;
+`;
+
 export const Footer: React.FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer>
+    <StyledFooter>
       <Conatiner>
         <StyledFooterText>{t("footer-text")}</StyledFooterText>
       </Conatiner>
-    </footer>
+    </StyledFooter>
   );
 };

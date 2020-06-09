@@ -5,6 +5,7 @@ import { Response, Request } from "express";
 import logger from "./logger";
 import { FailureResponse } from "./models";
 import { NODE_ENV } from "./config";
+import cors from "cors";
 import path from "path";
 
 const baseUrl = "api";
@@ -13,6 +14,7 @@ export const createApp = (): Application => {
   const app = express();
   const routes = [signup, login, logout, changePassword, refreshToken];
 
+  app.use(cors());
   app.use(express.json());
 
   app.use(cookieParser());

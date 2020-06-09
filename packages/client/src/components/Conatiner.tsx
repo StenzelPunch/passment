@@ -9,4 +9,6 @@ export const Conatiner = styled.div`
   margin: 0 auto;
   padding: 0 ${CONATINER_PADDING}px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 `;

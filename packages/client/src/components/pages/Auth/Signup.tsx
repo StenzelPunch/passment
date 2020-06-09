@@ -1,11 +1,83 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled/macro";
-import css from "@emotion/css/macro";
-import React from "react";
+import React, { useState } from "react";
+import { Conatiner } from "@passment/client/src/components/Conatiner";
+import { Card, cardMaxWidthCss } from "@passment/client/src/components/Card";
+import { Input } from "@passment/client/src/components/Input";
+import { verticalFlex } from "@passment/client/src/style/spacing";
+import { colors } from "@passment/client/src/style/colors";
+import { TextSizeCss } from "@passment/client/src/style/text";
+import { signup } from "@passment/client/src/api/signup";
 
-interface SignupProps {}
+const StyledConatiner = styled(Conatiner)`
+  height: 100%;
+  align-items: center;
+`;
 
-export const Signup: React.FC<SignupProps> = ({}) => {
-  return <div></div>;
+const PageHeader = styled.h2`
+  color: ${colors.text.colored.primary};
+  ${TextSizeCss.l}
+`;
+
+export const Signup: React.FC = () => {
+  const [email, setEmail] = useState<string>();
+  const [name, setName] = useState<string>();
+  const [password, setPassword] = useState<string>();
+  const [passwordConfirmation, setPasswordConfirmation] = useState<string>();
+
+  return (
+    <StyledConatiner css={verticalFlex.l}>
+      <PageHeader>Регистрация</PageHeader>
+      <Card css={[verticalFlex.s, cardMaxWidthCss]}>
+        <Input
+          type="email"
+          placeholder="E-mail"
+          label="E-mail"
+          name="email"
+          onChange={(e) => {
+            setEmail(e.currentTarget.value);
+          }}
+          value={email || ""}
+        />
+        <Input
+          type="text"
+          placeholder="Имя Фамилия"
+          label="Имя Фамилия"
+          name="name"
+          onChange={(e) => {
+            setName(e.currentTarget.value);
+          }}
+          value={name || ""}
+        />
+        <Input
+          type="password"
+          placeholder="Пароль"
+          label="Пароль"
+          name="password"
+          onChange={(e) => {
+            setPassword(e.currentTarget.value);
+          }}
+          value={password || ""}
+        />
+        <Input
+          type="password"
+          placeholder="Повторите пароль"
+          label="Повторите пароль"
+          name="password_confirmation"
+          onChange={(e) => {
+            setPasswordConfirmation(e.currentTarget.value);
+          }}
+          value={passwordConfirmation || ""}
+        />
+        <button
+          onClick={() => {
+            signup({ email, name, password, passwordConfirmation });
+          }}
+        >
+          Далее
+        </button>
+      </Card>
+    </StyledConatiner>
+  );
 };
