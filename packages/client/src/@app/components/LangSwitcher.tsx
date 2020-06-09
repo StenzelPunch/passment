@@ -4,7 +4,7 @@ import styled from "@emotion/styled/macro";
 import css from "@emotion/css/macro";
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Langs } from "../languages/i18n";
+import { Langs } from "@app/languages/i18n";
 
 const getLangText = (lang: Langs) => {
   switch (lang) {

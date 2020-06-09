@@ -2,10 +2,10 @@
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled/macro";
 import React from "react";
-import { Conatiner } from "./Conatiner";
-import "./pages/Landing/Landing.scss";
-import { Logo } from "./Logo";
-import { LangSwitcher } from "./LangSwitcher";
+import { Conatiner } from "@app/components/Conatiner";
+import "@app/components/pages/Landing/Landing.scss";
+import { Logo } from "@app/components/Logo";
+import { LangSwitcher } from "@app/components/LangSwitcher";
 
 const HeaderContent = styled.div`
   display: flex;

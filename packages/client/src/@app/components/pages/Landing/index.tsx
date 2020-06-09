@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import "./Landing.scss";
+import "@app/components/pages/Landing/Landing.scss";
 
 const prices = [100, 50, 100, 120];
 

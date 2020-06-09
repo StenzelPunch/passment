@@ -1,6 +1,6 @@
 import React from "react";
-import App from "./App";
-import "./languages/i18n.ts";
+import App from "@app/App";
+import "@app/languages/i18n.ts";
 import "./index.css";
 import "normalize.css";
 

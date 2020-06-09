@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import React from "react";
-import LogoImage from "./images/logo.svg";
+import LogoImage from "@app/components/images/logo.svg";
 
 interface LogoProps {
   className?: string;

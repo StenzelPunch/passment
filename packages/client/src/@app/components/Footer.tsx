@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 import styled from "@emotion/styled/macro";
 import React from "react";
-import { Conatiner } from "./Conatiner";
+import { Conatiner } from "@app/components/Conatiner";
 import "./pages/Landing/Landing.scss";
 import { useTranslation } from "react-i18next";
 
