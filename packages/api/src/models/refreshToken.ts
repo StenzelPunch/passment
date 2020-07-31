@@ -3,6 +3,7 @@ import { JWT_REFRESH_TTL } from "../config";
 
 export interface RefreshTokenDocument extends Document {
   token: string;
+  userId: string;
 }
 
 const refreshTokenSchema = new Schema(

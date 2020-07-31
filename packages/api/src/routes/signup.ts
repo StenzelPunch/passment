@@ -1,6 +1,6 @@
 import { Request, Response, Router, NextFunction } from "express";
 import { v4 as uuid } from "uuid";
-import { User } from "../models";
+import { User, UserRoles } from "../models";
 import { signupSchema } from "../validation";
 import {
   SuccessResponse,
@@ -30,8 +30,17 @@ const createUser = async (req: Request, res: Response) => {
   const { email, password, name } = req.body;
 
   try {
-    // TODO: chek uuid
-    const user = await User.create({ email, password, name, slug: uuid() });
+    // TODO: migrate to typegoose??
+    const user = await User.create({
+      email,
+      password,
+      name,
+      slug: uuid(),
+      role: UserRoles.USER,
+      premium: false,
+      emailVerify: false,
+      bio: ""
+    });
 
     const token = await createToken(user, res);
 
